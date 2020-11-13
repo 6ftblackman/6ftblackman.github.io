@@ -179,10 +179,10 @@ canMove = false;
 setTimeout(function(){
 //set jump back to just a fence
 gridBoxes[nextLocation].className = oldClassName;
-console.log(nextLocation2);
+
 //update current location of lb to be 2 spaces past take off
 currentLocationOfLb = nextLocation2;
-console.log("updating current location " + currentLocationOfLb);
+
 
 //get class of box after jump
 nextClass = gridBoxes[currentLocationOfLb].className;
@@ -191,7 +191,7 @@ nextClass = gridBoxes[currentLocationOfLb].className;
 //show lb and rider after landing
  gridBoxes[currentLocationOfLb].className = nextClass2;
  canMove = true;
- console.log("Animation updating div " + currentLocationOfLb + " to " + nextClass2 + nextClass);
+
 //if new box is target go up a level
 levelUp(nextClass);
 }, 350);
@@ -295,7 +295,7 @@ gridBoxes[nextLocation].className = oldClassName;
 
 //update current location of lb to be 2 spaces past take off
 currentLocationOfLb = nextLocation2;
-console.log("updating current location " + currentLocationOfLb);
+
 
 //get class of box after jump
 nextClass = gridBoxes[currentLocationOfLb].className;
@@ -304,7 +304,7 @@ nextClass = gridBoxes[currentLocationOfLb].className;
 //show lb and rider after landing
  gridBoxes[currentLocationOfLb].className = nextClass2;
  canMove = true;
- console.log("Animation updating div " + currentLocationOfLb + " to " + nextClass2 + nextClass);
+ 
 //if new box is target go up a level
 levelUp(nextClass);
 }, 350);
@@ -397,7 +397,7 @@ gridBoxes[nextLocation].className = oldClassName;
 
 //update current location of lb to be 2 spaces past take off
 currentLocationOfLb = nextLocation2;
-console.log("updating current location " + currentLocationOfLb);
+
 
 //get class of box after jump
 nextClass = gridBoxes[currentLocationOfLb].className;
@@ -406,7 +406,7 @@ nextClass = gridBoxes[currentLocationOfLb].className;
 //show lb and rider after landing
  gridBoxes[currentLocationOfLb].className = nextClass2;
  canMove = true;
- console.log("Animation updating div " + currentLocationOfLb + " to " + nextClass2 + nextClass);
+
 //if new box is target go up a level
 levelUp(nextClass);
 }, 350);
@@ -462,7 +462,7 @@ newClass += " bridge";
 if(!nextClass.includes("hurdle")){
 currentLocationOfLb = nextLocation;
 gridBoxes[currentLocationOfLb].className = newClass;
-console.log("updating div " + currentLocationOfLb + " to " + newClass);
+
 }
 
 //if its an enemy
@@ -558,8 +558,7 @@ time = 15;
 timer(time);
 
 //load board
-console.log("currentLevel:");
-console.log(currentLevel);
+
 for(i =0;i<gridBoxes.length; i++){
 gridBoxes[i].className = levelMap[i];
 if(levelMap[i].includes("lb")){
